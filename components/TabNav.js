@@ -1,10 +1,12 @@
 const TABS = [
   { id: "dashboard", label: "Dashboard" },
+  { id: "calendar", label: "Calendar & Daily" },
   { id: "weekly", label: "Weekly Plan" },
   { id: "platforms", label: "Practice Platforms" },
   { id: "tech", label: "Tech Tracks" },
   { id: "finance", label: "Finance Track" },
   { id: "projects", label: "Projects" },
+  { id: "applications", label: "Applications" },
 ];
 
 export default function TabNav({ active, onChange }) {

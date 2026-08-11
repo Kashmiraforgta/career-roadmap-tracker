@@ -8,6 +8,8 @@ import WeeklyPlan from "../components/WeeklyPlan";
 import Platforms from "../components/Platforms";
 import RoleTrackList from "../components/RoleTrackList";
 import Projects from "../components/Projects";
+import CalendarView from "../components/CalendarView";
+import ApplicationsView from "../components/ApplicationsView";
 import { techRoles, financeRoles } from "../lib/data";
 
 function PassphraseGate({ onSubmit }) {
@@ -26,8 +28,8 @@ function PassphraseGate({ onSubmit }) {
       >
         <h1 className="text-lg font-display font-bold text-navy mb-1">Career Roadmap Tracker</h1>
         <p className="text-sm text-inksoft mb-4">
-          Enter your passphrase to load your synced progress. This is remembered on this device
-          going forward.
+          Enter your passphrase to load your synced progress. You'll be asked for this every time
+          you open the app.
         </p>
         <input
           type="password"
@@ -81,6 +83,12 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <span className="text-[11px] text-inksoft font-tabular">{SYNC_LABEL[trackerState.syncStatus]}</span>
             <button
+              onClick={trackerState.exportData}
+              className="text-xs text-inksoft hover:text-accent border border-line hover:border-accent/50 rounded-lg px-3 py-1.5 transition-colors"
+            >
+              Export data
+            </button>
+            <button
               onClick={handleReset}
               className="text-xs text-inksoft hover:text-red-500 border border-line hover:border-red-300 rounded-lg px-3 py-1.5 transition-colors"
             >
@@ -94,6 +102,7 @@ export default function Home() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
         {tab === "dashboard" && <Dashboard trackerState={trackerState} setTab={setTab} />}
+        {tab === "calendar" && <CalendarView trackerState={trackerState} />}
         {tab === "weekly" && <WeeklyPlan trackerState={trackerState} />}
         {tab === "platforms" && <Platforms trackerState={trackerState} />}
         {tab === "tech" && (
@@ -113,6 +122,7 @@ export default function Home() {
           />
         )}
         {tab === "projects" && <Projects trackerState={trackerState} />}
+        {tab === "applications" && <ApplicationsView trackerState={trackerState} />}
       </div>
 
       <footer className="max-w-6xl mx-auto px-4 sm:px-6 pb-8 pt-2 text-center text-xs text-inksoft">

@@ -1,13 +1,68 @@
+"use client";
+
+import { useState } from "react";
 import { weeks } from "../lib/data";
 
+function ReviewSection({ weekNum, review, onChange }) {
+  const [open, setOpen] = useState(false);
+  const hasContent = review?.wentWell || review?.notWell || review?.adjust;
+
+  return (
+    <div className="mt-3 border-t border-line pt-3">
+      <button
+        onClick={() => setOpen((o) => !o)}
+        className="text-xs font-medium text-inksoft hover:text-navy flex items-center gap-1.5"
+      >
+        <span className={`transition-transform ${open ? "rotate-90" : ""}`}>›</span>
+        Weekly reflection
+        {hasContent && <span className="text-[10px] bg-accentsoft text-accent px-1.5 py-0.5 rounded-full">Reviewed</span>}
+      </button>
+      {open && (
+        <div className="grid sm:grid-cols-3 gap-2 mt-2">
+          <div>
+            <label className="text-[10px] uppercase tracking-wide text-inksoft">Went well</label>
+            <textarea
+              value={review?.wentWell || ""}
+              onChange={(e) => onChange(weekNum, { wentWell: e.target.value })}
+              rows={2}
+              className="w-full text-sm border border-line rounded-lg p-2 mt-1 resize-none focus:outline-none focus:ring-1 focus:ring-accent"
+              placeholder="What worked this week..."
+            />
+          </div>
+          <div>
+            <label className="text-[10px] uppercase tracking-wide text-inksoft">Didn't go well</label>
+            <textarea
+              value={review?.notWell || ""}
+              onChange={(e) => onChange(weekNum, { notWell: e.target.value })}
+              rows={2}
+              className="w-full text-sm border border-line rounded-lg p-2 mt-1 resize-none focus:outline-none focus:ring-1 focus:ring-accent"
+              placeholder="What slipped or felt hard..."
+            />
+          </div>
+          <div>
+            <label className="text-[10px] uppercase tracking-wide text-inksoft">Adjust next week</label>
+            <textarea
+              value={review?.adjust || ""}
+              onChange={(e) => onChange(weekNum, { adjust: e.target.value })}
+              rows={2}
+              className="w-full text-sm border border-line rounded-lg p-2 mt-1 resize-none focus:outline-none focus:ring-1 focus:ring-accent"
+              placeholder="One change to make..."
+            />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function WeeklyPlan({ trackerState }) {
-  const { state, toggleWeek } = trackerState;
+  const { state, toggleWeek, updateWeeklyReview } = trackerState;
 
   return (
     <div className="space-y-4">
       <div>
         <h2 className="text-xl font-display font-bold text-navy">Week-by-Week Plan</h2>
-        <p className="text-sm text-inksoft mt-1">Check off each week as you complete its milestone. This mirrors the 16-week roadmap document.</p>
+        <p className="text-sm text-inksoft mt-1">Check off each week as you complete its milestone, and jot a short reflection to keep pacing honest — this mirrors the roadmap's "revisit at Week 7" guidance, but works every week.</p>
       </div>
       <div className="space-y-3">
         {weeks.map((w) => {
@@ -36,6 +91,12 @@ export default function WeeklyPlan({ trackerState }) {
                   </div>
                   <p className="text-sm text-inksoft mt-1">{w.topics}</p>
                   <p className="text-sm text-accent mt-1">Milestone: {w.milestone}</p>
+
+                  <ReviewSection
+                    weekNum={w.week}
+                    review={state.weeklyReviews[w.week]}
+                    onChange={updateWeeklyReview}
+                  />
                 </div>
               </div>
             </div>
