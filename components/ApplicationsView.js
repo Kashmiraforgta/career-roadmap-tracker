@@ -90,7 +90,7 @@ export default function ApplicationsView({ trackerState }) {
           <p className="text-sm text-inksoft text-center py-8">No applications logged yet — add your first one above.</p>
         )}
         {sorted.map((a) => (
-          <div key={a.id} className="bg-white rounded-2xl border border-line p-4 shadow-sm">
+          <div key={a.id} className="card-hover bg-white rounded-2xl border border-line p-4 shadow-sm">
             <div className="flex flex-wrap items-start justify-between gap-2">
               <div>
                 <p className="font-medium text-ink">{a.company}{a.role && <span className="text-inksoft font-normal"> — {a.role}</span>}</p>

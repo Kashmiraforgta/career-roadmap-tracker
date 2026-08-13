@@ -3,8 +3,8 @@
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
 
 function formatDay(dateStr) {
-  const d = new Date(dateStr + "T00:00:00Z");
-  return `${d.getUTCDate()}/${d.getUTCMonth() + 1}`;
+  const d = new Date(dateStr + "T00:00:00");
+  return `${d.getDate()}/${d.getMonth() + 1}`;
 }
 
 function CustomTooltip({ active, payload, label }) {

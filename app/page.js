@@ -10,6 +10,11 @@ import RoleTrackList from "../components/RoleTrackList";
 import Projects from "../components/Projects";
 import CalendarView from "../components/CalendarView";
 import ApplicationsView from "../components/ApplicationsView";
+import LearningPathView from "../components/LearningPathView";
+import MistakesLog from "../components/MistakesLog";
+import ResourcesView from "../components/ResourcesView";
+import BackupRestore from "../components/BackupRestore";
+import { IconDownload, IconRefresh } from "../components/icons";
 import { techRoles, financeRoles } from "../lib/data";
 
 function PassphraseGate({ onSubmit }) {
@@ -75,24 +80,27 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <header className="bg-white/90 backdrop-blur border-b border-line">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-2 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-2 flex items-center justify-between flex-wrap gap-3">
           <div>
             <h1 className="text-lg sm:text-xl font-display font-bold text-navy">Career Roadmap Tracker</h1>
             <p className="text-xs text-inksoft">16-week prep · DA · DS · MLE · AI Eng · Full Stack · Finance</p>
           </div>
-          <div className="flex items-center gap-3">
-            <span className="text-[11px] text-inksoft font-tabular">{SYNC_LABEL[trackerState.syncStatus]}</span>
+          <div className="flex items-center gap-2 sm:gap-3">
+            <span className="text-[11px] text-inksoft font-tabular hidden sm:inline">{SYNC_LABEL[trackerState.syncStatus]}</span>
             <button
               onClick={trackerState.exportData}
-              className="text-xs text-inksoft hover:text-accent border border-line hover:border-accent/50 rounded-lg px-3 py-1.5 transition-colors"
+              className="flex items-center gap-1.5 text-xs text-inksoft hover:text-accent border border-line hover:border-accent/50 rounded-lg px-3 py-1.5 transition-colors"
             >
-              Export data
+              <IconDownload className="w-3.5 h-3.5" />
+              Export
             </button>
+            <BackupRestore onImport={trackerState.importData} />
             <button
               onClick={handleReset}
-              className="text-xs text-inksoft hover:text-red-500 border border-line hover:border-red-300 rounded-lg px-3 py-1.5 transition-colors"
+              className="flex items-center gap-1.5 text-xs text-inksoft hover:text-red-500 border border-line hover:border-red-300 rounded-lg px-3 py-1.5 transition-colors"
             >
-              Reset progress
+              <IconRefresh className="w-3.5 h-3.5" />
+              Reset
             </button>
           </div>
         </div>
@@ -123,6 +131,9 @@ export default function Home() {
         )}
         {tab === "projects" && <Projects trackerState={trackerState} />}
         {tab === "applications" && <ApplicationsView trackerState={trackerState} />}
+        {tab === "mistakes" && <MistakesLog trackerState={trackerState} />}
+        {tab === "resources" && <ResourcesView trackerState={trackerState} />}
+        {tab === "learning" && <LearningPathView />}
       </div>
 
       <footer className="max-w-6xl mx-auto px-4 sm:px-6 pb-8 pt-2 text-center text-xs text-inksoft">

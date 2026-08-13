@@ -36,6 +36,32 @@ h1, h2, h3, .font-display {
   border-radius: 4px;
 }
 
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Shared hover-lift used on card-style tiles across the app */
+.card-hover {
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -12px rgba(16, 26, 51, 0.18);
+  border-color: rgba(46, 111, 113, 0.35);
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(232, 163, 61, 0.45); }
+  100% { box-shadow: 0 0 0 12px rgba(232, 163, 61, 0); }
+}
+.timer-pulse {
+  animation: pulse-ring 1.8s ease-out infinite;
+}
+
 /* Visible keyboard focus everywhere, not just the browser default */
 :focus-visible {
   outline: 2px solid #2e6f71;

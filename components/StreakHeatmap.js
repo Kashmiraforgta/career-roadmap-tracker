@@ -1,6 +1,6 @@
 "use client";
 
-import { buildHeatmapGrid, computeStreaks, heatLevel } from "../lib/stats";
+import { buildHeatmapGrid, computeStreaks, heatLevel, STREAK_BADGES } from "../lib/stats";
 
 const LEVEL_COLOR = ["#E4E9F1", "#CFE7E4", "#9FCFC9", "#5CA79E", "#2E6F71"];
 
@@ -13,10 +13,10 @@ export default function StreakHeatmap({ activityLog }) {
   // Figure out which week-columns should carry a month label (first column
   // where the month changes from the previous column's first day).
   const monthLabels = grid.map((week, i) => {
-    const d = new Date(week[0].date + "T00:00:00Z");
-    if (i === 0) return MONTH_ABBR[d.getUTCMonth()];
-    const prevD = new Date(grid[i - 1][0].date + "T00:00:00Z");
-    return d.getUTCMonth() !== prevD.getUTCMonth() ? MONTH_ABBR[d.getUTCMonth()] : "";
+    const d = new Date(week[0].date + "T00:00:00");
+    if (i === 0) return MONTH_ABBR[d.getMonth()];
+    const prevD = new Date(grid[i - 1][0].date + "T00:00:00");
+    return d.getMonth() !== prevD.getMonth() ? MONTH_ABBR[d.getMonth()] : "";
   });
 
   return (
@@ -72,6 +72,24 @@ export default function StreakHeatmap({ activityLog }) {
           <div key={c} className="w-[10px] h-[10px] rounded-[2px]" style={{ backgroundColor: c }} />
         ))}
         <span className="text-[10px] text-white/40 ml-1">More</span>
+      </div>
+
+      <div className="flex flex-wrap gap-2 mt-5 pt-4 border-t border-white/10">
+        {STREAK_BADGES.map((b) => {
+          const unlocked = longest >= b.days;
+          return (
+            <div
+              key={b.days}
+              title={unlocked ? `Unlocked at ${b.days}-day streak` : `Reach a ${b.days}-day streak to unlock`}
+              className={`flex items-center gap-1.5 text-[11px] rounded-full px-3 py-1.5 border ${
+                unlocked ? "bg-signal/20 border-signal text-signal" : "bg-white/5 border-white/10 text-white/30"
+              }`}
+            >
+              <span>{unlocked ? "🔥" : "○"}</span>
+              {b.label}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

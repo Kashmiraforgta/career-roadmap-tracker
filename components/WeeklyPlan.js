@@ -2,21 +2,34 @@
 
 import { useState } from "react";
 import { weeks } from "../lib/data";
+import { QuickAddForm } from "./MistakesLog";
+import { IconAlert } from "./icons";
 
-function ReviewSection({ weekNum, review, onChange }) {
+function ReviewSection({ weekNum, review, onChange, onAddMistake, mistakeCount }) {
   const [open, setOpen] = useState(false);
+  const [mistakesOpen, setMistakesOpen] = useState(false);
   const hasContent = review?.wentWell || review?.notWell || review?.adjust;
 
   return (
     <div className="mt-3 border-t border-line pt-3">
-      <button
-        onClick={() => setOpen((o) => !o)}
-        className="text-xs font-medium text-inksoft hover:text-navy flex items-center gap-1.5"
-      >
-        <span className={`transition-transform ${open ? "rotate-90" : ""}`}>›</span>
-        Weekly reflection
-        {hasContent && <span className="text-[10px] bg-accentsoft text-accent px-1.5 py-0.5 rounded-full">Reviewed</span>}
-      </button>
+      <div className="flex items-center gap-3 flex-wrap">
+        <button
+          onClick={() => setOpen((o) => !o)}
+          className="text-xs font-medium text-inksoft hover:text-navy flex items-center gap-1.5"
+        >
+          <span className={`transition-transform ${open ? "rotate-90" : ""}`}>›</span>
+          Weekly reflection
+          {hasContent && <span className="text-[10px] bg-accentsoft text-accent px-1.5 py-0.5 rounded-full">Reviewed</span>}
+        </button>
+        <button
+          onClick={() => setMistakesOpen((o) => !o)}
+          className="text-xs font-medium text-inksoft hover:text-signal flex items-center gap-1.5"
+        >
+          <IconAlert className="w-3.5 h-3.5" />
+          Log a mistake
+          {mistakeCount > 0 && <span className="text-[10px] bg-signalsoft text-signal px-1.5 py-0.5 rounded-full">{mistakeCount}</span>}
+        </button>
+      </div>
       {open && (
         <div className="grid sm:grid-cols-3 gap-2 mt-2">
           <div>
@@ -51,12 +64,17 @@ function ReviewSection({ weekNum, review, onChange }) {
           </div>
         </div>
       )}
+      {mistakesOpen && (
+        <div className="mt-3 bg-signalsoft/50 border border-signal/20 rounded-xl p-3">
+          <QuickAddForm onAdd={onAddMistake} compact />
+        </div>
+      )}
     </div>
   );
 }
 
 export default function WeeklyPlan({ trackerState }) {
-  const { state, toggleWeek, updateWeeklyReview } = trackerState;
+  const { state, toggleWeek, updateWeeklyReview, addMistake } = trackerState;
 
   return (
     <div className="space-y-4">
@@ -70,7 +88,7 @@ export default function WeeklyPlan({ trackerState }) {
           return (
             <div
               key={w.week}
-              className={`bg-white rounded-2xl border p-4 sm:p-5 shadow-sm transition-colors ${
+              className={`card-hover bg-white rounded-2xl border p-4 sm:p-5 shadow-sm ${
                 done ? "border-accent/40 bg-accentsoft/40" : "border-line"
               }`}
             >
@@ -96,6 +114,8 @@ export default function WeeklyPlan({ trackerState }) {
                     weekNum={w.week}
                     review={state.weeklyReviews[w.week]}
                     onChange={updateWeeklyReview}
+                    onAddMistake={addMistake}
+                    mistakeCount={(state.mistakes || []).filter((m) => !m.resolved).length}
                   />
                 </div>
               </div>

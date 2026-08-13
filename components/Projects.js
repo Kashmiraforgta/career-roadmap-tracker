@@ -19,7 +19,7 @@ export default function Projects({ trackerState }) {
         {projects.map((p) => {
           const ps = state.projectState[p.id] || { status: "Not started", link: "", notes: "" };
           return (
-            <div key={p.id} className="bg-white rounded-2xl border border-line p-5 shadow-sm">
+            <div key={p.id} className="card-hover bg-white rounded-2xl border border-line p-5 shadow-sm">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <div>
                   <p className="font-medium text-ink">{p.name}</p>

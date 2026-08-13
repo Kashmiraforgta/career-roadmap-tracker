@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { getMonthMatrix, heatLevel, todayKey } from "../lib/stats";
+import { getMonthMatrix, heatLevel, todayKey, getRoadmapPosition } from "../lib/stats";
+import { weeks } from "../lib/data";
+import FocusTimer from "./FocusTimer";
 
 const LEVEL_COLOR = ["#E4E9F1", "#CFE7E4", "#9FCFC9", "#5CA79E", "#2E6F71"];
 const MONTH_NAMES = [
@@ -87,6 +89,8 @@ export default function CalendarView({ trackerState }) {
     removeDailyGoal,
     addEvent,
     removeEvent,
+    setProgramStartDate,
+    toggleRoadmapTaskDone,
   } = trackerState;
 
   const today = new Date();
@@ -133,6 +137,10 @@ export default function CalendarView({ trackerState }) {
   const goalsForDay = state.dailyGoals[selectedDate] || [];
   const checklistDoneCount = state.checklistItems.filter((c) => checklistForDay[c.id]).length;
 
+  const roadmapPos = getRoadmapPosition(state.programStartDate, selectedDate);
+  const roadmapWeek = roadmapPos ? weeks.find((w) => w.week === roadmapPos.week) : null;
+  const roadmapDoneMap = state.roadmapTaskDone[selectedDate] || {};
+
   const handleAddItem = (e) => {
     e.preventDefault();
     addChecklistItem(newItemText);
@@ -149,18 +157,29 @@ export default function CalendarView({ trackerState }) {
           <h2 className="text-xl font-display font-bold text-navy">Calendar &amp; Daily Goals</h2>
           <p className="text-sm text-inksoft mt-1">Month, week, and day views — schedule events, track streaks, and set goals per day.</p>
         </div>
-        <div className="flex gap-1 bg-white border border-line rounded-lg p-1 shrink-0">
-          {["month", "week", "day"].map((v) => (
-            <button
-              key={v}
-              onClick={() => setViewMode(v)}
-              className={`text-xs font-medium px-3 py-1.5 rounded-md capitalize transition-colors ${
-                viewMode === v ? "bg-navy text-white" : "text-inksoft hover:text-navy"
-              }`}
-            >
-              {v}
-            </button>
-          ))}
+        <div className="flex items-center gap-2 flex-wrap">
+          <label className="text-xs text-inksoft flex items-center gap-1.5 bg-white border border-line rounded-lg px-2 py-1.5">
+            Started
+            <input
+              type="date"
+              value={state.programStartDate || ""}
+              onChange={(e) => setProgramStartDate(e.target.value)}
+              className="text-xs font-tabular border-none outline-none bg-transparent"
+            />
+          </label>
+          <div className="flex gap-1 bg-white border border-line rounded-lg p-1 shrink-0">
+            {["month", "week", "day"].map((v) => (
+              <button
+                key={v}
+                onClick={() => setViewMode(v)}
+                className={`text-xs font-medium px-3 py-1.5 rounded-md capitalize transition-colors ${
+                  viewMode === v ? "bg-navy text-white" : "text-inksoft hover:text-navy"
+                }`}
+              >
+                {v}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -305,6 +324,39 @@ export default function CalendarView({ trackerState }) {
 
         {/* Selected day panel */}
         <div className="lg:col-span-2 space-y-4">
+          <FocusTimer trackerState={trackerState} compact />
+          {roadmapWeek ? (
+            <div className="bg-white rounded-2xl border border-accent/30 p-5 shadow-sm">
+              <div className="flex items-center justify-between mb-1">
+                <h3 className="font-display font-semibold text-navy text-sm">
+                  Week {roadmapWeek.week}, Day {roadmapPos.day + 1} · {roadmapWeek.focus}
+                </h3>
+                <span className="text-xs font-tabular text-accent">
+                  {Object.values(roadmapDoneMap).filter(Boolean).length}/1
+                </span>
+              </div>
+              <label className="flex items-start gap-2 text-sm cursor-pointer mt-3">
+                <input
+                  type="checkbox"
+                  checked={!!roadmapDoneMap[roadmapPos.day]}
+                  onChange={() => toggleRoadmapTaskDone(selectedDate, roadmapPos.day)}
+                  className="accent-accent w-4 h-4 shrink-0 mt-0.5"
+                />
+                <span className={roadmapDoneMap[roadmapPos.day] ? "text-inksoft line-through" : "text-ink"}>
+                  {roadmapWeek.dailyTasks[roadmapPos.day]}
+                </span>
+              </label>
+              <p className="text-[11px] text-inksoft mt-2">Milestone this week: {roadmapWeek.milestone}</p>
+            </div>
+          ) : (
+            <div className="bg-white rounded-2xl border border-line p-5 shadow-sm text-center">
+              <p className="text-sm text-inksoft">
+                {state.programStartDate
+                  ? "This day is outside your 16-week plan window."
+                  : "Set your program start date above to see this day's specific roadmap task here."}
+              </p>
+            </div>
+          )}
           {viewMode !== "day" && (
             <div className="bg-white rounded-2xl border border-line p-5 shadow-sm">
               <div className="flex items-center justify-between mb-3">

@@ -15,7 +15,7 @@ export default function Platforms({ trackerState }) {
           const val = state.platformProgress[p.id]?.value || 0;
           const notes = state.platformProgress[p.id]?.notes || "";
           return (
-            <div key={p.id} className="bg-white rounded-2xl border border-line p-5 shadow-sm">
+            <div key={p.id} className="card-hover bg-white rounded-2xl border border-line p-5 shadow-sm">
               <div className="flex justify-between items-start">
                 <div>
                   <h3 className="font-semibold text-ink">{p.name}</h3>

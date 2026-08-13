@@ -14,7 +14,7 @@ export default function RoleTrackList({ roles, trackerState, title, description 
           const topicsState = state.roleTopics[role.id] || [];
           const done = topicsState.filter(Boolean).length;
           return (
-            <div key={role.id} className="bg-white rounded-2xl border border-line p-5 shadow-sm">
+            <div key={role.id} className="card-hover bg-white rounded-2xl border border-line p-5 shadow-sm">
               <div className="flex justify-between items-start">
                 <h3 className="font-semibold text-ink">{role.name}</h3>
                 <span className="text-xs text-inksoft font-tabular">{done}/{role.topics.length}</span>
