@@ -1,0 +1,2110 @@
+{
+ "days": [
+  {
+   "date": "2026-10-22",
+   "slot1": {
+    "project": "MAD-2",
+    "work": "Confirm Git Tracker registration (Milestone 0). Choose EMP or TMA, create private repo, project skeleton (Flask backend, Vue frontend), virtualenv, requirements.txt",
+    "study": "Flask app structure, blueprints, SQLAlchemy models and relationships"
+   },
+   "slot2": {
+    "project": "MLP",
+    "work": "Confirm registration: notebook named <roll>-notebook-2026t3, private, shared with iitmbscs2008p, first submission made, registration form filed (due Nov 1) | Read the Milestone 3 questions on Seek and map each to a notebook section; tidy EDA",
+    "study": "Pipelines and data leakage: fit on train only"
+   },
+   "nightA": {
+    "project": "MAD-2",
+    "task": "ER diagram and feature checklist taken from the problem statement"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "Confirm Form 1 and Milestone 1 are submitted (their deadlines, Oct 20 and 21, have passed); finish M1 items: image loading, defect mask visualisation, Dice metric; commit"
+   },
+   "notes": "Check: DL Form 1 (Oct 20) and M1 (Oct 21) deadlines have passed; confirm both were submitted. MAD bootcamp (online) runs Oct 20-29"
+  },
+  {
+   "date": "2026-10-23",
+   "slot1": {
+    "project": "MAD-2",
+    "work": "SQLAlchemy models and relationships, create_all, admin seeded on first run",
+    "study": "Password hashing, JWT (access/refresh), sessions vs tokens"
+   },
+   "slot2": {
+    "project": "MLP",
+    "work": "Leakage-safe preprocessing pipeline: imputation, scaling, encoding inside Pipeline / ColumnTransformer",
+    "study": "Missing values: MCAR/MAR/MNAR and imputation"
+   },
+   "nightA": {
+    "project": "MAD-2",
+    "task": "Register and login APIs with password hashing and JWT"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "RLE to pixel-mask decoder; check on 5 images visually; commit"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-10-24",
+   "slot1": {
+    "project": "MAD-2",
+    "work": "Role-based access (decorators) and role-based redirects; Vue project, router, Bootstrap layout",
+    "study": "Vue 3: components, router, guards, API calls"
+   },
+   "slot2": {
+    "project": "MLP",
+    "work": "Write Milestone 3 answers (max 10 lines each), export <roll>_26t3_M3.pdf, submit (due Oct 25)",
+    "study": "Scaling and encoding: when each matters per model family"
+   },
+   "nightA": {
+    "project": "MAD-2",
+    "task": "Vue login and register pages, token storage, route guards"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "PyTorch Dataset and DataLoader with train/val split; commit"
+   },
+   "notes": "MLP Milestone 3 submitted today (due Oct 25)"
+  },
+  {
+   "date": "2026-10-25",
+   "slot1": {
+    "project": "MAD-2",
+    "work": "Admin CRUD part 1: first main entity (list, create, edit, delete) API and UI",
+    "study": "REST design: status codes, validation, error handling in Flask"
+   },
+   "slot2": {
+    "project": "DL & GenAI",
+    "work": "Augmentations applied jointly to image and mask; sanity-check batches",
+    "study": "U-Net: encoder, decoder, skip connections, transposed convolutions"
+   },
+   "nightA": {
+    "project": "MAD-2",
+    "task": "Validation and clear error responses for admin CRUD"
+   },
+   "nightB": {
+    "project": "MLP",
+    "task": "Baseline models (linear and tree) with 5-fold CV; record the metric"
+   },
+   "notes": "Sunday: 15-min weekly review of ticks and next week"
+  },
+  {
+   "date": "2026-10-26",
+   "slot1": {
+    "project": "MAD-2",
+    "work": "Admin CRUD part 2: second entity plus search and filters",
+    "study": "SQLAlchemy queries: joins, filters, pagination"
+   },
+   "slot2": {
+    "project": "DL & GenAI",
+    "work": "U-Net from scratch: model, Dice+BCE training loop, W&B logging; smoke test",
+    "study": "Dice and IoU: definitions, relation, why Dice for imbalance"
+   },
+   "nightA": {
+    "project": "MAD-2",
+    "task": "Pagination, sorting, admin dashboard counts"
+   },
+   "nightB": {
+    "project": "MLP",
+    "task": "Feature engineering v1 (ratios, groupings, date parts); check importance"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-10-27",
+   "slot1": {
+    "project": "MAD-2",
+    "work": "Second role (Examiner / Staff or Trek Guide): role dashboard and features",
+    "study": "RBAC design: authorisation on backend vs frontend"
+   },
+   "slot2": {
+    "project": "DL & GenAI",
+    "work": "Train U-Net from scratch (run 1, start it early so it runs in the background); baseline Kaggle submission; submit Milestone 2 (due Oct 28)",
+    "study": "RLE and mask encodings; augmentation theory for segmentation"
+   },
+   "nightA": {
+    "project": "MAD-2",
+    "task": "Second role UI and permission checks"
+   },
+   "nightB": {
+    "project": "MLP",
+    "task": "LightGBM baseline on engineered features"
+   },
+   "notes": "DL Milestone 2 submitted today (due Oct 28)"
+  },
+  {
+   "date": "2026-10-28",
+   "slot1": {
+    "project": "MAD-2",
+    "work": "Student / Trekker flow: browse, register or book, history",
+    "study": "Transactions and concurrency: overbooking, duplicate checks"
+   },
+   "slot2": {
+    "project": "DL & GenAI",
+    "work": "Run 2 with tuned LR and augmentations; compare Dice in W&B; commit",
+    "study": "Training loop internals: BCE, SGD vs Adam, learning-rate effects"
+   },
+   "nightA": {
+    "project": "MAD-2",
+    "task": "Business rules: overbooking, duplicate checks, cancellation"
+   },
+   "nightB": {
+    "project": "MLP",
+    "task": "XGBoost / CatBoost baseline; CV table across 3+ model families"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-10-29",
+   "slot1": {
+    "project": "MAD-2",
+    "work": "Celery + Redis: daily reminder, monthly report, async CSV export",
+    "study": "Celery workers, beat schedules, Redis as broker and cache"
+   },
+   "slot2": {
+    "project": "MLP",
+    "work": "Error analysis (worst segments) and feature engineering v2",
+    "study": "Bias-variance and cross-validation schemes"
+   },
+   "nightA": {
+    "project": "MAD-2",
+    "task": "Redis caching with expiry on the heavy endpoints"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "Pretrained-encoder U-Net setup (download weights with internet on, upload as a Kaggle dataset for offline inference)"
+   },
+   "notes": "MAD bootcamp 1 ends"
+  },
+  {
+   "date": "2026-10-30",
+   "slot1": {
+    "project": "MAD-2",
+    "work": "End-to-end test of every role against the problem-statement checklist; fix bugs",
+    "study": "Testing: manual test plan, API tests (pytest or Postman)"
+   },
+   "slot2": {
+    "project": "MLP",
+    "work": "Write Milestone 4 answers, export <roll>_26t3_M4.pdf, submit (due Nov 1)",
+    "study": "Linear models and regularisation (L1/L2)"
+   },
+   "nightA": {
+    "project": "MAD-2",
+    "task": "UI polish and README with setup and run steps"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "Train model 2 (pretrained encoder) run 1; log to W&B"
+   },
+   "notes": "MLP Milestone 4 submitted today (due Nov 1)"
+  },
+  {
+   "date": "2026-10-31",
+   "slot1": {
+    "project": "MAD-2",
+    "work": "Report (max 5 pages, with AI-use declaration) and 5-10 min demo video",
+    "study": "Viva drill: explain each file aloud; list 20 likely questions"
+   },
+   "slot2": {
+    "project": "DL & GenAI",
+    "work": "Model 2 run 2; first loss experiment (BCE vs Dice vs combined)",
+    "study": "Transfer learning: pretrained encoders, freezing vs fine-tuning"
+   },
+   "nightA": {
+    "project": "MAD-2",
+    "task": "Zip with correct root structure, run the validation Google form, download the submission and re-check it"
+   },
+   "nightB": {
+    "project": "MLP",
+    "task": "Run FinalNotebook end to end on CPU; Kaggle submission #1 (max 5 a day, 10+ total needed)"
+   },
+   "notes": "TARGET: MAD-2 complete and submit-ready (project can be submitted only once)"
+  },
+  {
+   "date": "2026-11-01",
+   "slot1": {
+    "project": "MLP",
+    "work": "Hyperparameter tuning plan; RandomizedSearchCV for LightGBM (stick to the allowed libraries)",
+    "study": "Decision trees and random forests internals"
+   },
+   "slot2": {
+    "project": "DL & GenAI",
+    "work": "Loss experiments on model 2: BCE, Dice, BCE+Dice (3 W&B runs)",
+    "study": "ResNet / EfficientNet backbones: why residual connections help"
+   },
+   "nightA": {
+    "project": "MAD-2",
+    "task": "Make a run-in-10-minutes script: fresh venv, install, seed, run; time it (viva rule: run within 10 min) (continues)"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "Study LR, batch size, image size and pretrained vs random init; record a results table (continues)"
+   },
+   "notes": "MLP registration form deadline 11:59 PM (late = -1 mark/week); MLP M4 buffer | Sunday: 15-min weekly review of ticks and next week"
+  },
+  {
+   "date": "2026-11-02",
+   "slot1": {
+    "project": "MLP",
+    "work": "Tune XGBoost with CV",
+    "study": "Gradient boosting: LightGBM vs XGBoost vs CatBoost"
+   },
+   "slot2": {
+    "project": "DL & GenAI",
+    "work": "Continue: Study LR, batch size, image size and pretrained vs random init; record a results table | Milestone 3 wrap-up: compare runs in W&B, write notes; submit Milestone 3 (due Nov 4) (continues)",
+    "study": "Loss functions: BCE vs Dice vs combined, gradients"
+   },
+   "nightA": {
+    "project": "MAD-2",
+    "task": "Continue: Make a run-in-10-minutes script: fresh venv, install, seed, run; time it (viva rule: run within 10 min)"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "Continue: Milestone 3 wrap-up: compare runs in W&B, write notes; submit Milestone 3 (due Nov 4)"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-11-03",
+   "slot1": {
+    "project": "MLP",
+    "work": "Tune CatBoost with CV",
+    "study": "Feature engineering and importance (permutation, gain)"
+   },
+   "slot2": {
+    "project": "DL & GenAI",
+    "work": "Model 3 (DeepLabV3+ or FPN): setup and first run",
+    "study": "Batch size, LR and image size: effect on generalisation"
+   },
+   "nightA": {
+    "project": "MAD-2",
+    "task": "Explain every file aloud (routes, models, tasks, Vue components); note weak spots (continues)"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "Model 3 runs 2-3; compare all models in W&B (3+ runs on common metrics) (continues)"
+   },
+   "notes": "DL Milestone 3 submitted (due Nov 4)"
+  },
+  {
+   "date": "2026-11-04",
+   "slot1": {
+    "project": "MLP",
+    "work": "Feature selection by importance; re-run CV",
+    "study": "Metrics for the task and error analysis"
+   },
+   "slot2": {
+    "project": "MAD-2",
+    "work": "Continue: Explain every file aloud (routes, models, tasks, Vue components); note weak spots | Live-change drills: add a field, a route, a validation and a filter without notes (continues)",
+    "study": "Flask request lifecycle and app factory"
+   },
+   "nightA": {
+    "project": "MAD-2",
+    "task": "Continue: Live-change drills: add a field, a route, a validation and a filter without notes"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "Continue: Model 3 runs 2-3; compare all models in W&B (3+ runs on common metrics)"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-11-05",
+   "slot1": {
+    "project": "MLP",
+    "work": "Stacking / blending of the top 3 models using OOF predictions",
+    "study": "Hyperparameter tuning: random vs grid search"
+   },
+   "slot2": {
+    "project": "MAD-2",
+    "work": "Celery/Redis demo drill: start workers, show reminder, CSV export and cache expiry",
+    "study": "SQLAlchemy session and transactions"
+   },
+   "nightA": {
+    "project": "MAD-2",
+    "task": "Mock Level 1: authenticity questions plus the objective checklist from the problem statement (continues)"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "Class imbalance: weighted loss or sampling; images with several defect classes; per-class Dice (continues)"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-11-06",
+   "slot1": {
+    "project": "MLP",
+    "work": "Milestone 5 answers (max 10 lines each), export <roll>_26t3_M5.pdf, submit (due Nov 8) (continues)",
+    "study": "Stacking and blending; OOF predictions"
+   },
+   "slot2": {
+    "project": "MAD-2",
+    "work": "Continue: Mock Level 1: authenticity questions plus the objective checklist from the problem statement | Level 2 drills: architecture choices, trade-offs, security (JWT, RBAC), what you would scale (continues)",
+    "study": "JWT vs session auth, security pitfalls (XSS, CSRF, hashing)"
+   },
+   "nightA": {
+    "project": "MLP",
+    "task": "Continue: Milestone 5 answers (max 10 lines each), export <roll>_26t3_M5.pdf, submit (due Nov 8)"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "Continue: Class imbalance: weighted loss or sampling; images with several defect classes; per-class Dice"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-11-07",
+   "slot1": {
+    "project": "MLP",
+    "work": "Kaggle submissions from FinalNotebook: ensemble v1",
+    "study": "Overfitting to the public leaderboard"
+   },
+   "slot2": {
+    "project": "MAD-2",
+    "work": "Continue: Level 2 drills: architecture choices, trade-offs, security (JWT, RBAC), what you would scale",
+    "study": "Vue reactivity, lifecycle, component communication"
+   },
+   "nightA": {
+    "project": "MLP",
+    "task": "Kaggle submissions: tuned ensemble v2; compare public leaderboard; pick best (continues)"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "LR scheduler (cosine / OneCycle) and early stopping on validation Dice (continues)"
+   },
+   "notes": "TARGET: MAD-2 viva-ready | MLP Milestone 5 submitted by today (due Nov 8)"
+  },
+  {
+   "date": "2026-11-08",
+   "slot1": {
+    "project": "MLP",
+    "work": "Continue: Kaggle submissions: tuned ensemble v2; compare public leaderboard; pick best | Final pipeline cleanup: reusable functions for train and test, comments, outputs visible, dead code removed (continues)",
+    "study": "Model comparison write-up: pros and cons"
+   },
+   "slot2": {
+    "project": "DL & GenAI",
+    "work": "Continue: LR scheduler (cosine / OneCycle) and early stopping on validation Dice | Mixed precision (AMP) and batch-size tuning; check GPU memory (continues)",
+    "study": "DeepLabV3+: atrous convolution and ASPP"
+   },
+   "nightA": {
+    "project": "MLP",
+    "task": "Continue: Final pipeline cleanup: reusable functions for train and test, comments, outputs visible, dead code removed (continues)"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "Continue: Mixed precision (AMP) and batch-size tuning; check GPU memory"
+   },
+   "notes": "Sunday: 15-min weekly review of ticks and next week"
+  },
+  {
+   "date": "2026-11-09",
+   "slot1": {
+    "project": "MLP",
+    "work": "Continue: Final pipeline cleanup: reusable functions for train and test, comments, outputs visible, dead code removed | Level 1 checklist walkthrough: EDA to error analysis story; model comparison table with pros and cons (continues)",
+    "study": "Statistics refresh: distributions and hypothesis tests"
+   },
+   "slot2": {
+    "project": "DL & GenAI",
+    "work": "Milestone 4 wrap-up: validation Dice monitoring, overfitting check; submit Milestone 4 (due Nov 11)",
+    "study": "FPN and other decoders; comparing architectures"
+   },
+   "nightA": {
+    "project": "MLP",
+    "task": "Continue: Level 1 checklist walkthrough: EDA to error analysis story; model comparison table with pros and cons (continues)"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "Resolution, loss and training-strategy experiments on the best model (continues)"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-11-10",
+   "slot1": {
+    "project": "MLP",
+    "work": "Continue: Level 1 checklist walkthrough: EDA to error analysis story; model comparison table with pros and cons | Lock FinalNotebook (private, shared); confirm best model is in it. MLP complete",
+    "study": "MLF/MLT refresh: optimisation and loss functions"
+   },
+   "slot2": {
+    "project": "DL & GenAI",
+    "work": "Continue: Resolution, loss and training-strategy experiments on the best model | Threshold sweep per class on validation; minimum-area filtering; morphological cleanup (continues)",
+    "study": "Class imbalance: weighted loss, focal loss, sampling"
+   },
+   "nightA": {
+    "project": "MLP",
+    "task": "Walk through the notebook aloud: EDA, preprocessing, feature engineering, models, error analysis (continues)"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "Continue: Threshold sweep per class on validation; minimum-area filtering; morphological cleanup"
+   },
+   "notes": "TARGET: MLP complete. DL Milestone 4 due tomorrow"
+  },
+  {
+   "date": "2026-11-11",
+   "slot1": {
+    "project": "MLP",
+    "work": "Continue: Walk through the notebook aloud: EDA, preprocessing, feature engineering, models, error analysis | Live coding: write a Pipeline / ColumnTransformer, a CV loop and a custom metric from scratch (continues)",
+    "study": "MLF: linear algebra and optimisation questions"
+   },
+   "slot2": {
+    "project": "DL & GenAI",
+    "work": "Evaluate post-processing on validation; Dice before and after (continues)",
+    "study": "LR schedulers (cosine, OneCycle, warmup) and early stopping"
+   },
+   "nightA": {
+    "project": "DL & GenAI",
+    "task": "Continue: Evaluate post-processing on validation; Dice before and after"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "Ensemble: average probabilities of best checkpoints and models; flip TTA (continues)"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-11-12",
+   "slot1": {
+    "project": "MLP",
+    "work": "Continue: Live coding: write a Pipeline / ColumnTransformer, a CV loop and a custom metric from scratch | For each model write Data, Model, Loss, Optimisation, Evaluation on one page (continues)",
+    "study": "MLT: bias-variance, SVM and kernels"
+   },
+   "slot2": {
+    "project": "DL & GenAI",
+    "work": "Continue: Ensemble: average probabilities of best checkpoints and models; flip TTA | RLE encoder; validate submission format against sample_submission (shape, order, empty masks) (continues)",
+    "study": "Mixed precision (AMP): fp16, loss scaling, memory"
+   },
+   "nightA": {
+    "project": "DL & GenAI",
+    "task": "Continue: RLE encoder; validate submission format against sample_submission (shape, order, empty masks)"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "Full Kaggle inference notebook: load trained models from Kaggle Hub, run offline, write submission (continues)"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-11-13",
+   "slot1": {
+    "project": "MLP",
+    "work": "Continue: For each model write Data, Model, Loss, Optimisation, Evaluation on one page | Mock Level 1 using the 9-point checklist; record yourself (continues)",
+    "study": "Statistics: estimation, tests, confidence intervals"
+   },
+   "slot2": {
+    "project": "DL & GenAI",
+    "work": "Continue: Full Kaggle inference notebook: load trained models from Kaggle Hub, run offline, write submission",
+    "study": "Overfitting: detection, regularisation, augmentation"
+   },
+   "nightA": {
+    "project": "DL & GenAI",
+    "task": "Kaggle submission rounds with ensemble variants; track public leaderboard Dice (continues)"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "Continue: Kaggle submission rounds with ensemble variants; track public leaderboard Dice"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-11-14",
+   "slot1": {
+    "project": "MLP",
+    "work": "Continue: Mock Level 1 using the 9-point checklist; record yourself | Level 2 mock: concept questions from MLF, MLT and statistics (continues)",
+    "study": "Probabilistic models and Bayes"
+   },
+   "slot2": {
+    "project": "DL & GenAI",
+    "work": "Pick final ensemble; final Kaggle submission before the Nov 15 cutoff; confirm score vs cutoff (continues)",
+    "study": "Thresholding and calibration for masks"
+   },
+   "nightA": {
+    "project": "DL & GenAI",
+    "task": "Continue: Pick final ensemble; final Kaggle submission before the Nov 15 cutoff; confirm score vs cutoff"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "Error analysis: failure examples per defect class; save figures for the report (continues)"
+   },
+   "notes": "DL final Kaggle submission (cutoff Nov 15); MLP Kaggle competition ends Nov 15"
+  },
+  {
+   "date": "2026-11-15",
+   "slot1": {
+    "project": "MLP",
+    "work": "Continue: Level 2 mock: concept questions from MLF, MLT and statistics | Debug drill: change the metric, add a feature, change the split live (continues)",
+    "study": "Trees and boosting internals"
+   },
+   "slot2": {
+    "project": "DL & GenAI",
+    "work": "Continue: Error analysis: failure examples per defect class; save figures for the report | Fix inference issues; Milestone 5 prep",
+    "study": "Post-processing: morphology and minimum-area filtering"
+   },
+   "nightA": {
+    "project": "DL & GenAI",
+    "task": "Report draft, sections 1-3: problem, methodology, architectures with diagrams (continues)"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "Continue: Report draft, sections 1-3: problem, methodology, architectures with diagrams (continues)"
+   },
+   "notes": "Sunday: 15-min weekly review of ticks and next week"
+  },
+  {
+   "date": "2026-11-16",
+   "slot1": {
+    "project": "MLP",
+    "work": "Continue: Debug drill: change the metric, add a feature, change the split live",
+    "study": "Clustering and PCA"
+   },
+   "slot2": {
+    "project": "DL & GenAI",
+    "work": "Continue: Report draft, sections 1-3: problem, methodology, architectures with diagrams | Report draft, sections 4-6: training details, tuning logs, evaluation tables, error analysis, insights (continues)",
+    "study": "Ensembling and TTA: why it works"
+   },
+   "nightA": {
+    "project": "DL & GenAI",
+    "task": "Continue: Report draft, sections 4-6: training details, tuning logs, evaluation tables, error analysis, insights (continues)"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "Continue: Report draft, sections 4-6: training details, tuning logs, evaluation tables, error analysis, insights"
+   },
+   "notes": "TARGET: MLP viva-ready"
+  },
+  {
+   "date": "2026-11-17",
+   "slot1": {
+    "project": "MLP",
+    "work": "Revision round: redo mock Level 1/2 questions on weak topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "slot2": {
+    "project": "DL & GenAI",
+    "work": "Final report PDF and final submission; submit Milestone 5 (due Nov 18) (continues)",
+    "study": "Evaluation: per-class Dice, macro F1, error analysis methods"
+   },
+   "nightA": {
+    "project": "DL & GenAI",
+    "task": "Continue: Final report PDF and final submission; submit Milestone 5 (due Nov 18)"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "Optional +5: Streamlit / Gradio deployment (Hugging Face Space); check usability and stability (continues)"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-11-18",
+   "slot1": {
+    "project": "MLP",
+    "work": "Revision round: redo mock Level 1/2 questions on weak topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "slot2": {
+    "project": "DL & GenAI",
+    "work": "Continue: Optional +5: Streamlit / Gradio deployment (Hugging Face Space); check usability and stability",
+    "study": "Reproducibility: seeds, environments, W&B tracking"
+   },
+   "nightA": {
+    "project": "DL & GenAI",
+    "task": "Code quality: separate preprocessing, training and inference scripts, README, requirements.txt, clean commits; prepare Form 2 (report) and Form 3 (deployment link). DL complete (continues)"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "Continue: Code quality: separate preprocessing, training and inference scripts, README, requirements.txt, clean commits; prepare Form 2 (report) and Form 3 (deployment link). DL complete (continues)"
+   },
+   "notes": "DL Milestone 5 / final submission due"
+  },
+  {
+   "date": "2026-11-19",
+   "slot1": {
+    "project": "MLP",
+    "work": "Revision round: redo mock Level 1/2 questions on weak topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "slot2": {
+    "project": "DL & GenAI",
+    "work": "Continue: Code quality: separate preprocessing, training and inference scripts, README, requirements.txt, clean commits; prepare Form 2 (report) and Form 3 (deployment link). DL complete | Walk through your code end to end aloud: data, model, training, inference; time it to 20 minutes (continues)",
+    "study": "Report writing: justifying design choices"
+   },
+   "nightA": {
+    "project": "DL & GenAI",
+    "task": "Continue: Walk through your code end to end aloud: data, model, training, inference; time it to 20 minutes"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "Live-coding drill: write the Dice metric, RLE encode/decode and a Dataset class from scratch (continues)"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-11-20",
+   "slot1": {
+    "project": "MLP",
+    "work": "Revision round: redo mock Level 1/2 questions on weak topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "slot2": {
+    "project": "DL & GenAI",
+    "work": "Continue: Live-coding drill: write the Dice metric, RLE encode/decode and a Dataset class from scratch | Explain each of the 3 models: why chosen, W&B results, what you would change (continues)",
+    "study": "GenAI: attention and Transformers"
+   },
+   "nightA": {
+    "project": "DL & GenAI",
+    "task": "Continue: Explain each of the 3 models: why chosen, W&B results, what you would change"
+   },
+   "nightB": {
+    "project": "DL & GenAI",
+    "task": "Mock Level 1 viva on the 7 checkpoints; record yourself (continues)"
+   },
+   "notes": "TARGET: DL complete (report, deployment, code); MAD bootcamp 2 starts today"
+  },
+  {
+   "date": "2026-11-21",
+   "slot1": {
+    "project": "DL & GenAI",
+    "work": "Continue: Mock Level 1 viva on the 7 checkpoints; record yourself | Report Q&A: explain every figure and table in your report (continues)",
+    "study": "GenAI: diffusion models basics"
+   },
+   "slot2": {
+    "project": "MLP",
+    "work": "Revision round: redo mock Level 1/2 questions on weak topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "DSA & Problem Solving",
+    "task": "Big-O and arrays"
+   },
+   "nightB": {
+    "project": "SQL & Python for Data",
+    "task": "SQL joins and aggregations"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-11-22",
+   "slot1": {
+    "project": "DL & GenAI",
+    "work": "Continue: Report Q&A: explain every figure and table in your report | Level 2 mock: design choices, trade-offs, next steps, end-to-end thinking (continues)",
+    "study": "GenAI: GANs and VAEs"
+   },
+   "slot2": {
+    "project": "MAD-2",
+    "work": "Revision round: re-run the demo, redo live-change drills; update notes",
+    "study": "Celery/Redis internals: broker, beat, result backend, cache expiry"
+   },
+   "nightA": {
+    "project": "Portfolio & Communication",
+    "task": "Resume rewrite"
+   },
+   "nightB": {
+    "project": "ML/DL Theory Depth",
+    "task": "Linear algebra for ML (eigen, SVD)"
+   },
+   "notes": "MLP cutoff must be crossed (Sept 2026 theory term) | Sunday: 15-min weekly review of ticks and next week"
+  },
+  {
+   "date": "2026-11-23",
+   "slot1": {
+    "project": "DL & GenAI",
+    "work": "Continue: Level 2 mock: design choices, trade-offs, next steps, end-to-end thinking",
+    "study": "GenAI: LLMs, fine-tuning, RAG"
+   },
+   "slot2": {
+    "project": "MLP",
+    "work": "Revision round: redo mock Level 1/2 questions on weak topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "SQL & Python for Data",
+    "task": "Window functions"
+   },
+   "nightB": {
+    "project": "DSA & Problem Solving",
+    "task": "Hashing (two-sum, anagrams)"
+   },
+   "notes": "TARGET: DL viva-ready"
+  },
+  {
+   "date": "2026-11-24",
+   "slot1": {
+    "project": "DL & GenAI",
+    "work": "Revision round: redo mock viva on your weakest topics; update notes",
+    "study": "Vision Transformers vs CNNs"
+   },
+   "slot2": {
+    "project": "MAD-2",
+    "work": "Revision round: re-run the demo, redo live-change drills; update notes",
+    "study": "Database design: normalisation, indexes, constraints"
+   },
+   "nightA": {
+    "project": "DSA & Problem Solving",
+    "task": "Two pointers and sliding window"
+   },
+   "nightB": {
+    "project": "Cloud & MLOps",
+    "task": "Git: branching, rebase, PRs"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-11-25",
+   "slot1": {
+    "project": "DL & GenAI",
+    "work": "Revision round: redo mock viva on your weakest topics; update notes",
+    "study": "Evaluating generative models"
+   },
+   "slot2": {
+    "project": "MLP",
+    "work": "Revision round: redo mock Level 1/2 questions on weak topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "ML/DL Theory Depth",
+    "task": "Probability and Bayes revision"
+   },
+   "nightB": {
+    "project": "SQL & Python for Data",
+    "task": "CTEs and subqueries"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-11-26",
+   "slot1": {
+    "project": "DL & GenAI",
+    "work": "Revision round: redo mock viva on your weakest topics; update notes",
+    "study": "Review: U-Net and segmentation Q&A"
+   },
+   "slot2": {
+    "project": "MAD-2",
+    "work": "Revision round: re-run the demo, redo live-change drills; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "Cloud & MLOps",
+    "task": "Linux and shell basics"
+   },
+   "nightB": {
+    "project": "DSA & Problem Solving",
+    "task": "Stacks and queues"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-11-27",
+   "slot1": {
+    "project": "DL & GenAI",
+    "work": "Revision round: redo mock viva on your weakest topics; update notes",
+    "study": "Review: transfer learning and optimisation Q&A"
+   },
+   "slot2": {
+    "project": "MLP",
+    "work": "Revision round: redo mock Level 1/2 questions on weak topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "Portfolio & Communication",
+    "task": "LinkedIn profile polish"
+   },
+   "nightB": {
+    "project": "ML/DL Theory Depth",
+    "task": "Gradient descent and optimisers (Adam)"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-11-28",
+   "slot1": {
+    "project": "DL & GenAI",
+    "work": "Revision round: redo mock viva on your weakest topics; update notes",
+    "study": "Review: GenAI theory Q&A"
+   },
+   "slot2": {
+    "project": "MAD-2",
+    "work": "Revision round: re-run the demo, redo live-change drills; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "DSA & Problem Solving",
+    "task": "Linked lists"
+   },
+   "nightB": {
+    "project": "SQL & Python for Data",
+    "task": "Indexes and query optimisation"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-11-29",
+   "slot1": {
+    "project": "DL & GenAI",
+    "work": "Revision round: redo mock viva on your weakest topics; update notes",
+    "study": "Review: weakest topics from mock viva"
+   },
+   "slot2": {
+    "project": "MLP",
+    "work": "Revision round: redo mock Level 1/2 questions on weak topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "Portfolio & Communication",
+    "task": "GitHub profile README"
+   },
+   "nightB": {
+    "project": "ML/DL Theory Depth",
+    "task": "Backprop by hand"
+   },
+   "notes": "Sunday: 15-min weekly review of ticks and next week"
+  },
+  {
+   "date": "2026-11-30",
+   "slot1": {
+    "project": "DL & GenAI",
+    "work": "Revision round: redo mock viva on your weakest topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "slot2": {
+    "project": "MAD-2",
+    "work": "Revision round: re-run the demo, redo live-change drills; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "SQL & Python for Data",
+    "task": "Pandas groupby, merge, pivot"
+   },
+   "nightB": {
+    "project": "DSA & Problem Solving",
+    "task": "Binary search patterns"
+   },
+   "notes": "DL Form 2 + Form 3 deadline; DL viva window ends"
+  },
+  {
+   "date": "2026-12-01",
+   "slot1": {
+    "project": "DL & GenAI",
+    "work": "Revision round: redo mock viva on your weakest topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "slot2": {
+    "project": "MLP",
+    "work": "Revision round: redo mock Level 1/2 questions on weak topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "DSA & Problem Solving",
+    "task": "Recursion and backtracking"
+   },
+   "nightB": {
+    "project": "Cloud & MLOps",
+    "task": "Docker basics"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-12-02",
+   "slot1": {
+    "project": "DL & GenAI",
+    "work": "Revision round: redo mock viva on your weakest topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "slot2": {
+    "project": "MLP",
+    "work": "Revision round: redo mock Level 1/2 questions on weak topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "ML/DL Theory Depth",
+    "task": "Regularisation and bias-variance"
+   },
+   "nightB": {
+    "project": "SQL & Python for Data",
+    "task": "Pandas cleaning and time series"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-12-03",
+   "slot1": {
+    "project": "DL & GenAI",
+    "work": "Revision round: redo mock viva on your weakest topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "slot2": {
+    "project": "MLP",
+    "work": "Revision round: redo mock Level 1/2 questions on weak topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "Cloud & MLOps",
+    "task": "Dockerise an ML app"
+   },
+   "nightB": {
+    "project": "DSA & Problem Solving",
+    "task": "Trees: traversals and BST"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-12-04",
+   "slot1": {
+    "project": "DL & GenAI",
+    "work": "Revision round: redo mock viva on your weakest topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "slot2": {
+    "project": "MLP",
+    "work": "Revision round: redo mock Level 1/2 questions on weak topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "Portfolio & Communication",
+    "task": "Pin and clean best repos"
+   },
+   "nightB": {
+    "project": "ML/DL Theory Depth",
+    "task": "Metrics deep dive (F1, AUC, Dice)"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-12-05",
+   "slot1": {
+    "project": "DL & GenAI",
+    "work": "Revision round: redo mock viva on your weakest topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "slot2": {
+    "project": "MLP",
+    "work": "Revision round: redo mock Level 1/2 questions on weak topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "DSA & Problem Solving",
+    "task": "Heaps and priority queues"
+   },
+   "nightB": {
+    "project": "SQL & Python for Data",
+    "task": "NumPy vectorisation"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-12-06",
+   "slot1": {
+    "project": "DL & GenAI",
+    "work": "Revision round: redo mock viva on your weakest topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "slot2": {
+    "project": "MLP",
+    "work": "Revision round: redo mock Level 1/2 questions on weak topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "Portfolio & Communication",
+    "task": "README template for projects"
+   },
+   "nightB": {
+    "project": "ML/DL Theory Depth",
+    "task": "Tree ensembles and GBM internals"
+   },
+   "notes": "MLP vivas deadline if theory was Jan/May 2026 (Dec 20 for Sept 2026) | Sunday: 15-min weekly review of ticks and next week"
+  },
+  {
+   "date": "2026-12-07",
+   "slot1": {
+    "project": "DL & GenAI",
+    "work": "Revision round: redo mock viva on your weakest topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "slot2": {
+    "project": "MAD-2",
+    "work": "Revision round: re-run the demo, redo live-change drills; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "SQL & Python for Data",
+    "task": "Matplotlib/Seaborn storytelling"
+   },
+   "nightB": {
+    "project": "DSA & Problem Solving",
+    "task": "Graphs: BFS and DFS"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-12-08",
+   "slot1": {
+    "project": "DL & GenAI",
+    "work": "Revision round: redo mock viva on your weakest topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "slot2": {
+    "project": "MAD-2",
+    "work": "Revision round: re-run the demo, redo live-change drills; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "DSA & Problem Solving",
+    "task": "Dynamic programming 1D"
+   },
+   "nightB": {
+    "project": "Cloud & MLOps",
+    "task": "REST API with FastAPI"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-12-09",
+   "slot1": {
+    "project": "DL & GenAI",
+    "work": "Revision round: redo mock viva on your weakest topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "slot2": {
+    "project": "MAD-2",
+    "work": "Revision round: re-run the demo, redo live-change drills; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "ML/DL Theory Depth",
+    "task": "CNN architectures (ResNet)"
+   },
+   "nightB": {
+    "project": "SQL & Python for Data",
+    "task": "Python OOP and decorators"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-12-10",
+   "slot1": {
+    "project": "DL & GenAI",
+    "work": "Revision round: redo mock viva on your weakest topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "slot2": {
+    "project": "MAD-2",
+    "work": "Revision round: re-run the demo, redo live-change drills; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "Cloud & MLOps",
+    "task": "Experiment tracking (W&B / MLflow)"
+   },
+   "nightB": {
+    "project": "DSA & Problem Solving",
+    "task": "Dynamic programming 2D / knapsack"
+   },
+   "notes": "MAD-2 official submission deadline (Sept 2026 theory)"
+  },
+  {
+   "date": "2026-12-11",
+   "slot1": {
+    "project": "DL & GenAI",
+    "work": "Revision round: redo mock viva on your weakest topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "slot2": {
+    "project": "MAD-2",
+    "work": "Revision round: re-run the demo, redo live-change drills; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "Portfolio & Communication",
+    "task": "Blog post 1: what I built"
+   },
+   "nightB": {
+    "project": "ML/DL Theory Depth",
+    "task": "Attention and Transformers"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-12-12",
+   "slot1": {
+    "project": "DL & GenAI",
+    "work": "Revision round: redo mock viva on your weakest topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "slot2": {
+    "project": "MAD-2",
+    "work": "Revision round: re-run the demo, redo live-change drills; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "DSA & Problem Solving",
+    "task": "Greedy and intervals"
+   },
+   "nightB": {
+    "project": "SQL & Python for Data",
+    "task": "Generators, iterators, context managers"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-12-13",
+   "slot1": {
+    "project": "MLP",
+    "work": "Revision round: redo mock Level 1/2 questions on weak topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "slot2": {
+    "project": "MAD-2",
+    "work": "Revision round: re-run the demo, redo live-change drills; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "Portfolio & Communication",
+    "task": "Blog post 2: lessons learned"
+   },
+   "nightB": {
+    "project": "ML/DL Theory Depth",
+    "task": "Paper reading: U-Net"
+   },
+   "notes": "Sunday: 15-min weekly review of ticks and next week"
+  },
+  {
+   "date": "2026-12-14",
+   "slot1": {
+    "project": "MLP",
+    "work": "Revision round: redo mock Level 1/2 questions on weak topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "slot2": {
+    "project": "MAD-2",
+    "work": "Revision round: re-run the demo, redo live-change drills; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "SQL & Python for Data",
+    "task": "Regex and file handling"
+   },
+   "nightB": {
+    "project": "DSA & Problem Solving",
+    "task": "Tries and union-find"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-12-15",
+   "slot1": {
+    "project": "MLP",
+    "work": "Revision round: redo mock Level 1/2 questions on weak topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "slot2": {
+    "project": "MAD-2",
+    "work": "Revision round: re-run the demo, redo live-change drills; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "DSA & Problem Solving",
+    "task": "Timed set: 3 problems in 90 min"
+   },
+   "nightB": {
+    "project": "Cloud & MLOps",
+    "task": "Azure fundamentals (Microsoft Learn path)"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-12-16",
+   "slot1": {
+    "project": "MLP",
+    "work": "Revision round: redo mock Level 1/2 questions on weak topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "slot2": {
+    "project": "MAD-2",
+    "work": "Revision round: re-run the demo, redo live-change drills; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "ML/DL Theory Depth",
+    "task": "Paper reading: ResNet / ViT"
+   },
+   "nightB": {
+    "project": "SQL & Python for Data",
+    "task": "Testing with pytest"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-12-17",
+   "slot1": {
+    "project": "MLP",
+    "work": "Revision round: redo mock Level 1/2 questions on weak topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "slot2": {
+    "project": "MAD-2",
+    "work": "Revision round: re-run the demo, redo live-change drills; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "Cloud & MLOps",
+    "task": "Azure ML / Azure OpenAI overview"
+   },
+   "nightB": {
+    "project": "DSA & Problem Solving",
+    "task": "Mock interview round"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-12-18",
+   "slot1": {
+    "project": "MLP",
+    "work": "Revision round: redo mock Level 1/2 questions on weak topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "slot2": {
+    "project": "MAD-2",
+    "work": "Revision round: re-run the demo, redo live-change drills; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "Portfolio & Communication",
+    "task": "5-minute explain-your-project talk"
+   },
+   "nightB": {
+    "project": "ML/DL Theory Depth",
+    "task": "Generative models overview (VAE, GAN, diffusion)"
+   },
+   "notes": null
+  },
+  {
+   "date": "2026-12-19",
+   "slot1": {
+    "project": "MLP",
+    "work": "Revision round: redo mock Level 1/2 questions on weak topics; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "slot2": {
+    "project": "MAD-2",
+    "work": "Revision round: re-run the demo, redo live-change drills; update notes",
+    "study": "Review notes and flashcards on weak topics"
+   },
+   "nightA": {
+    "project": "DSA & Problem Solving",
+    "task": "Revision / mini-project on this track"
+   },
+   "nightB": {
+    "project": "SQL & Python for Data",
+    "task": "SQL practice set (30 queries)"
+   },
+   "notes": null
+  }
+ ],
+ "deadlines": [
+  {
+   "deadline": "2026-10-25",
+   "planBy": "2026-10-24",
+   "project": "MLP",
+   "what": "Milestone 3 (Seek, PDF named <roll>_26t3_M3.pdf)"
+  },
+  {
+   "deadline": "2026-10-28",
+   "planBy": "2026-10-27",
+   "project": "DL & GenAI",
+   "what": "Milestone 2"
+  },
+  {
+   "deadline": "2026-11-01",
+   "planBy": "2026-10-30",
+   "project": "MLP",
+   "what": "Milestone 4 + MLP registration form (late = -1 mark per week)"
+  },
+  {
+   "deadline": "2026-11-04",
+   "planBy": "2026-11-03",
+   "project": "DL & GenAI",
+   "what": "Milestone 3"
+  },
+  {
+   "deadline": "2026-11-08",
+   "planBy": "2026-11-06",
+   "project": "MLP",
+   "what": "Milestone 5"
+  },
+  {
+   "deadline": "2026-11-11",
+   "planBy": "2026-11-09",
+   "project": "DL & GenAI",
+   "what": "Milestone 4"
+  },
+  {
+   "deadline": "2026-11-15",
+   "planBy": "2026-11-14",
+   "project": "DL & GenAI",
+   "what": "Kaggle final inference / cutoff (date from your earlier notes)"
+  },
+  {
+   "deadline": "2026-11-15",
+   "planBy": "2026-11-10",
+   "project": "MLP",
+   "what": "Kaggle competition ends (10+ submissions from FinalNotebook, max 5/day)"
+  },
+  {
+   "deadline": "2026-11-18",
+   "planBy": "2026-11-17",
+   "project": "DL & GenAI",
+   "what": "Milestone 5 / final submission"
+  },
+  {
+   "deadline": "2026-11-22",
+   "planBy": "2026-11-10",
+   "project": "MLP",
+   "what": "Score cutoff must be crossed (Sept 2026 term)"
+  },
+  {
+   "deadline": "2026-11-30",
+   "planBy": "2026-11-20",
+   "project": "DL & GenAI",
+   "what": "Form 2 (report) + Form 3 (deployment link); DL viva window ends"
+  },
+  {
+   "deadline": "2026-12-06",
+   "planBy": "2026-11-10",
+   "project": "MLP",
+   "what": "Both vivas done IF your MLP theory was Jan/May 2026 (otherwise Dec 20)"
+  },
+  {
+   "deadline": "2026-12-10",
+   "planBy": "2026-10-31",
+   "project": "MAD-2",
+   "what": "Project submission (Sept 2026 theory); Nov 17 if theory was completed earlier"
+  },
+  {
+   "deadline": "2026-12-20",
+   "planBy": "2026-12-19",
+   "project": "MLP",
+   "what": "Both vivas completed (Sept 2026 term)"
+  }
+ ],
+ "skills": [
+  {
+   "track": "SQL & Python for Data",
+   "n": 1,
+   "topic": "SQL joins and aggregations",
+   "plannedDate": "2026-11-21",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "SQL & Python for Data",
+   "n": 2,
+   "topic": "Window functions",
+   "plannedDate": "2026-11-23",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "SQL & Python for Data",
+   "n": 3,
+   "topic": "CTEs and subqueries",
+   "plannedDate": "2026-11-25",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "SQL & Python for Data",
+   "n": 4,
+   "topic": "Indexes and query optimisation",
+   "plannedDate": "2026-11-28",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "SQL & Python for Data",
+   "n": 5,
+   "topic": "Pandas groupby, merge, pivot",
+   "plannedDate": "2026-11-30",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "SQL & Python for Data",
+   "n": 6,
+   "topic": "Pandas cleaning and time series",
+   "plannedDate": "2026-12-02",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "SQL & Python for Data",
+   "n": 7,
+   "topic": "NumPy vectorisation",
+   "plannedDate": "2026-12-05",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "SQL & Python for Data",
+   "n": 8,
+   "topic": "Matplotlib/Seaborn storytelling",
+   "plannedDate": "2026-12-07",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "SQL & Python for Data",
+   "n": 9,
+   "topic": "Python OOP and decorators",
+   "plannedDate": "2026-12-09",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "SQL & Python for Data",
+   "n": 10,
+   "topic": "Generators, iterators, context managers",
+   "plannedDate": "2026-12-12",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "SQL & Python for Data",
+   "n": 11,
+   "topic": "Regex and file handling",
+   "plannedDate": "2026-12-14",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "SQL & Python for Data",
+   "n": 12,
+   "topic": "Testing with pytest",
+   "plannedDate": "2026-12-16",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "SQL & Python for Data",
+   "n": 13,
+   "topic": "SQL practice set (30 queries)",
+   "plannedDate": "2026-12-19",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "SQL & Python for Data",
+   "n": 14,
+   "topic": "Pandas practice: clean a messy dataset",
+   "plannedDate": null,
+   "block": null,
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "SQL & Python for Data",
+   "n": 15,
+   "topic": "Build a small ETL script",
+   "plannedDate": null,
+   "block": null,
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "SQL & Python for Data",
+   "n": 16,
+   "topic": "Python mock interview set",
+   "plannedDate": null,
+   "block": null,
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "DSA & Problem Solving",
+   "n": 1,
+   "topic": "Big-O and arrays",
+   "plannedDate": "2026-11-21",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "DSA & Problem Solving",
+   "n": 2,
+   "topic": "Hashing (two-sum, anagrams)",
+   "plannedDate": "2026-11-23",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "DSA & Problem Solving",
+   "n": 3,
+   "topic": "Two pointers and sliding window",
+   "plannedDate": "2026-11-24",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "DSA & Problem Solving",
+   "n": 4,
+   "topic": "Stacks and queues",
+   "plannedDate": "2026-11-26",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "DSA & Problem Solving",
+   "n": 5,
+   "topic": "Linked lists",
+   "plannedDate": "2026-11-28",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "DSA & Problem Solving",
+   "n": 6,
+   "topic": "Binary search patterns",
+   "plannedDate": "2026-11-30",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "DSA & Problem Solving",
+   "n": 7,
+   "topic": "Recursion and backtracking",
+   "plannedDate": "2026-12-01",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "DSA & Problem Solving",
+   "n": 8,
+   "topic": "Trees: traversals and BST",
+   "plannedDate": "2026-12-03",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "DSA & Problem Solving",
+   "n": 9,
+   "topic": "Heaps and priority queues",
+   "plannedDate": "2026-12-05",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "DSA & Problem Solving",
+   "n": 10,
+   "topic": "Graphs: BFS and DFS",
+   "plannedDate": "2026-12-07",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "DSA & Problem Solving",
+   "n": 11,
+   "topic": "Dynamic programming 1D",
+   "plannedDate": "2026-12-08",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "DSA & Problem Solving",
+   "n": 12,
+   "topic": "Dynamic programming 2D / knapsack",
+   "plannedDate": "2026-12-10",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "DSA & Problem Solving",
+   "n": 13,
+   "topic": "Greedy and intervals",
+   "plannedDate": "2026-12-12",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "DSA & Problem Solving",
+   "n": 14,
+   "topic": "Tries and union-find",
+   "plannedDate": "2026-12-14",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "DSA & Problem Solving",
+   "n": 15,
+   "topic": "Timed set: 3 problems in 90 min",
+   "plannedDate": "2026-12-15",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "DSA & Problem Solving",
+   "n": 16,
+   "topic": "Mock interview round",
+   "plannedDate": "2026-12-17",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "ML/DL Theory Depth",
+   "n": 1,
+   "topic": "Linear algebra for ML (eigen, SVD)",
+   "plannedDate": "2026-11-22",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "ML/DL Theory Depth",
+   "n": 2,
+   "topic": "Probability and Bayes revision",
+   "plannedDate": "2026-11-25",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "ML/DL Theory Depth",
+   "n": 3,
+   "topic": "Gradient descent and optimisers (Adam)",
+   "plannedDate": "2026-11-27",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "ML/DL Theory Depth",
+   "n": 4,
+   "topic": "Backprop by hand",
+   "plannedDate": "2026-11-29",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "ML/DL Theory Depth",
+   "n": 5,
+   "topic": "Regularisation and bias-variance",
+   "plannedDate": "2026-12-02",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "ML/DL Theory Depth",
+   "n": 6,
+   "topic": "Metrics deep dive (F1, AUC, Dice)",
+   "plannedDate": "2026-12-04",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "ML/DL Theory Depth",
+   "n": 7,
+   "topic": "Tree ensembles and GBM internals",
+   "plannedDate": "2026-12-06",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "ML/DL Theory Depth",
+   "n": 8,
+   "topic": "CNN architectures (ResNet)",
+   "plannedDate": "2026-12-09",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "ML/DL Theory Depth",
+   "n": 9,
+   "topic": "Attention and Transformers",
+   "plannedDate": "2026-12-11",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "ML/DL Theory Depth",
+   "n": 10,
+   "topic": "Paper reading: U-Net",
+   "plannedDate": "2026-12-13",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "ML/DL Theory Depth",
+   "n": 11,
+   "topic": "Paper reading: ResNet / ViT",
+   "plannedDate": "2026-12-16",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "ML/DL Theory Depth",
+   "n": 12,
+   "topic": "Generative models overview (VAE, GAN, diffusion)",
+   "plannedDate": "2026-12-18",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "ML/DL Theory Depth",
+   "n": 13,
+   "topic": "LLM basics: tokenisation, fine-tuning, RAG",
+   "plannedDate": null,
+   "block": null,
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "ML/DL Theory Depth",
+   "n": 14,
+   "topic": "Implement logistic regression from scratch",
+   "plannedDate": null,
+   "block": null,
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "ML/DL Theory Depth",
+   "n": 15,
+   "topic": "Mini neural net in NumPy",
+   "plannedDate": null,
+   "block": null,
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "ML/DL Theory Depth",
+   "n": 16,
+   "topic": "ML theory interview Q&A",
+   "plannedDate": null,
+   "block": null,
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Cloud & MLOps",
+   "n": 1,
+   "topic": "Git: branching, rebase, PRs",
+   "plannedDate": "2026-11-24",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Cloud & MLOps",
+   "n": 2,
+   "topic": "Linux and shell basics",
+   "plannedDate": "2026-11-26",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Cloud & MLOps",
+   "n": 3,
+   "topic": "Docker basics",
+   "plannedDate": "2026-12-01",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Cloud & MLOps",
+   "n": 4,
+   "topic": "Dockerise an ML app",
+   "plannedDate": "2026-12-03",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Cloud & MLOps",
+   "n": 5,
+   "topic": "REST API with FastAPI",
+   "plannedDate": "2026-12-08",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Cloud & MLOps",
+   "n": 6,
+   "topic": "Experiment tracking (W&B / MLflow)",
+   "plannedDate": "2026-12-10",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Cloud & MLOps",
+   "n": 7,
+   "topic": "Azure fundamentals (Microsoft Learn path)",
+   "plannedDate": "2026-12-15",
+   "block": "B",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Cloud & MLOps",
+   "n": 8,
+   "topic": "Azure ML / Azure OpenAI overview",
+   "plannedDate": "2026-12-17",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Cloud & MLOps",
+   "n": 9,
+   "topic": "CI with GitHub Actions",
+   "plannedDate": null,
+   "block": null,
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Cloud & MLOps",
+   "n": 10,
+   "topic": "Deploy a model (HF Spaces / Streamlit)",
+   "plannedDate": null,
+   "block": null,
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Cloud & MLOps",
+   "n": 11,
+   "topic": "Reproducibility: requirements, environments",
+   "plannedDate": null,
+   "block": null,
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Cloud & MLOps",
+   "n": 12,
+   "topic": "Monitoring and logging basics",
+   "plannedDate": null,
+   "block": null,
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Cloud & MLOps",
+   "n": 13,
+   "topic": "Cloud storage and databases overview",
+   "plannedDate": null,
+   "block": null,
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Cloud & MLOps",
+   "n": 14,
+   "topic": "Redis and queues refresher",
+   "plannedDate": null,
+   "block": null,
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Cloud & MLOps",
+   "n": 15,
+   "topic": "Deploy a small project end to end",
+   "plannedDate": null,
+   "block": null,
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Cloud & MLOps",
+   "n": 16,
+   "topic": "Cloud/MLOps quiz and notes",
+   "plannedDate": null,
+   "block": null,
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Portfolio & Communication",
+   "n": 1,
+   "topic": "Resume rewrite",
+   "plannedDate": "2026-11-22",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Portfolio & Communication",
+   "n": 2,
+   "topic": "LinkedIn profile polish",
+   "plannedDate": "2026-11-27",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Portfolio & Communication",
+   "n": 3,
+   "topic": "GitHub profile README",
+   "plannedDate": "2026-11-29",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Portfolio & Communication",
+   "n": 4,
+   "topic": "Pin and clean best repos",
+   "plannedDate": "2026-12-04",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Portfolio & Communication",
+   "n": 5,
+   "topic": "README template for projects",
+   "plannedDate": "2026-12-06",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Portfolio & Communication",
+   "n": 6,
+   "topic": "Blog post 1: what I built",
+   "plannedDate": "2026-12-11",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Portfolio & Communication",
+   "n": 7,
+   "topic": "Blog post 2: lessons learned",
+   "plannedDate": "2026-12-13",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Portfolio & Communication",
+   "n": 8,
+   "topic": "5-minute explain-your-project talk",
+   "plannedDate": "2026-12-18",
+   "block": "A",
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Portfolio & Communication",
+   "n": 9,
+   "topic": "Mock HR / behavioural round",
+   "plannedDate": null,
+   "block": null,
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Portfolio & Communication",
+   "n": 10,
+   "topic": "Networking and cold-email templates",
+   "plannedDate": null,
+   "block": null,
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Portfolio & Communication",
+   "n": 11,
+   "topic": "Kaggle write-up",
+   "plannedDate": null,
+   "block": null,
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Portfolio & Communication",
+   "n": 12,
+   "topic": "One-page portfolio site",
+   "plannedDate": null,
+   "block": null,
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Portfolio & Communication",
+   "n": 13,
+   "topic": "Certificates and badges review",
+   "plannedDate": null,
+   "block": null,
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Portfolio & Communication",
+   "n": 14,
+   "topic": "Weekly review habit",
+   "plannedDate": null,
+   "block": null,
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Portfolio & Communication",
+   "n": 15,
+   "topic": "Interview story bank (STAR)",
+   "plannedDate": null,
+   "block": null,
+   "status": "Not started",
+   "notes": null
+  },
+  {
+   "track": "Portfolio & Communication",
+   "n": 16,
+   "topic": "Final portfolio review",
+   "plannedDate": null,
+   "block": null,
+   "status": "Not started",
+   "notes": null
+  }
+ ]
+}

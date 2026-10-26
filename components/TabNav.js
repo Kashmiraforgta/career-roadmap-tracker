@@ -17,6 +17,7 @@ const TABS = [
   { id: "mistakes", label: "Mistakes Log", Icon: IconAlert },
   { id: "resources", label: "Resources", Icon: IconBook },
   { id: "learning", label: "Learning Path", Icon: IconBook },
+  { id: "t3", label: "T3 Planner", Icon: IconTarget },
 ];
 
 export default function TabNav({ active, onChange }) {

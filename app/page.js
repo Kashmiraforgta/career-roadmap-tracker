@@ -14,6 +14,7 @@ import LearningPathView from "../components/LearningPathView";
 import MistakesLog from "../components/MistakesLog";
 import ResourcesView from "../components/ResourcesView";
 import BackupRestore from "../components/BackupRestore";
+import { T3PlannerContent } from "./t3/page";
 import { IconDownload, IconRefresh } from "../components/icons";
 import { techRoles, financeRoles } from "../lib/data";
 
@@ -134,6 +135,7 @@ export default function Home() {
         {tab === "mistakes" && <MistakesLog trackerState={trackerState} />}
         {tab === "resources" && <ResourcesView trackerState={trackerState} />}
         {tab === "learning" && <LearningPathView />}
+        {tab === "t3" && <T3PlannerContent trackerState={trackerState} />}
       </div>
 
       <footer className="max-w-6xl mx-auto px-4 sm:px-6 pb-8 pt-2 text-center text-xs text-inksoft">

@@ -1,3 +1,18 @@
+:root {
+  --peacock-navy-deep: #020556;
+  --peacock-navy-surface: #0A1070;
+  --peacock-navy-deepest: #010320;
+  --peacock-cerulean: #01ACD4;
+  --peacock-teal: #01D1AE;
+  --peacock-emerald: #0CA686;
+  --peacock-lime: #64DF31;
+  --peacock-gold: #B27F25;
+  --peacock-cream: #E6F4FA;
+  --peacock-mist: #A9D2E2;
+  --peacock-red: #D45A5A;
+  --peacock-line: rgba(178, 127, 37, 0.35);
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,12 +22,13 @@ html {
 }
 
 body {
-  background-color: #eef1f6;
+  background-color: var(--peacock-navy-deepest);
   background-image:
-    linear-gradient(#dde3ee 1px, transparent 1px),
-    linear-gradient(90deg, #dde3ee 1px, transparent 1px);
-  background-size: 28px 28px;
-  color: #10182b;
+    radial-gradient(circle at top left, rgba(1, 172, 212, 0.12), transparent 32%),
+    linear-gradient(rgba(178,127,37,0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(178,127,37,0.16) 1px, transparent 1px);
+  background-size: auto, 28px 28px, 28px 28px;
+  color: #0F172A;
   font-family: var(--font-body), sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -32,7 +48,7 @@ h1, h2, h3, .font-display {
   height: 8px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #c9d2dc;
+  background: rgba(1, 172, 212, 0.6);
   border-radius: 4px;
 }
 
@@ -44,27 +60,25 @@ h1, h2, h3, .font-display {
   display: none;
 }
 
-/* Shared hover-lift used on card-style tiles across the app */
 .card-hover {
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 .card-hover:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px -12px rgba(16, 26, 51, 0.18);
-  border-color: rgba(46, 111, 113, 0.35);
+  box-shadow: 0 12px 28px -18px rgba(1, 172, 212, 0.7);
+  border-color: rgba(178, 127, 37, 0.5);
 }
 
 @keyframes pulse-ring {
-  0% { box-shadow: 0 0 0 0 rgba(232, 163, 61, 0.45); }
-  100% { box-shadow: 0 0 0 12px rgba(232, 163, 61, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(100, 223, 49, 0.4); }
+  100% { box-shadow: 0 0 0 12px rgba(100, 223, 49, 0); }
 }
 .timer-pulse {
   animation: pulse-ring 1.8s ease-out infinite;
 }
 
-/* Visible keyboard focus everywhere, not just the browser default */
 :focus-visible {
-  outline: 2px solid #2e6f71;
+  outline: 2px solid var(--peacock-cyan, #01ACD4);
   outline-offset: 2px;
   border-radius: 4px;
 }
