@@ -75,10 +75,10 @@ export default function ResourcesView({ trackerState }) {
 
   return (
     <div className="space-y-4">
-      <div className="flex items-start justify-between flex-wrap gap-2">
-        <div>
-          <h2 className="text-xl font-display font-bold text-navy">Resources</h2>
-          <p className="text-sm text-inksoft mt-1 max-w-2xl">
+      <div className="page-heading-panel flex items-start justify-between flex-wrap gap-2">
+        <div className="max-w-2xl">
+          <h2 className="font-display">Resources</h2>
+          <p>
             Curated docs, courses, and playlists per track — StatQuest, Made With ML, CFI and more — pulled
             straight from the original roadmap so links live here instead of scattered bookmarks. Check one
             off after you've been through it for a small XP bump.

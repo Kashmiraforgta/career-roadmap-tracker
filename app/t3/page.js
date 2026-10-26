@@ -185,11 +185,11 @@ export function T3PlannerContent({ trackerState }) {
 
   return (
     <main className="min-h-screen">
-      <header className="bg-white/90 backdrop-blur border-b border-line">
+      <header className="bg-[#0A1070] backdrop-blur border-b-[3px] border-[#64DF31]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-2 flex items-center justify-between flex-wrap gap-3">
           <div>
-            <h1 className="text-lg sm:text-xl font-display font-bold text-navy">Career Roadmap Tracker</h1>
-            <p className="text-xs text-inksoft">T3 planner · execution log · deadline view</p>
+            <h1 className="text-lg sm:text-xl font-display font-bold text-white">Career Roadmap Tracker</h1>
+            <p className="text-xs text-[#A9D2E2]">T3 planner · execution log · deadline view</p>
           </div>
         </div>
       </header>

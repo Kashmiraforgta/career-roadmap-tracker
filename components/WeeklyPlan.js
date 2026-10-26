@@ -78,9 +78,9 @@ export default function WeeklyPlan({ trackerState }) {
 
   return (
     <div className="space-y-4">
-      <div>
-        <h2 className="text-xl font-display font-bold text-navy">Week-by-Week Plan</h2>
-        <p className="text-sm text-inksoft mt-1">Check off each week as you complete its milestone, and jot a short reflection to keep pacing honest — this mirrors the roadmap's "revisit at Week 7" guidance, but works every week.</p>
+      <div className="page-heading-panel">
+        <h2 className="font-display">Week-by-Week Plan</h2>
+        <p>Check off each week as you complete its milestone, and jot a short reflection to keep pacing honest — this mirrors the roadmap's "revisit at Week 7" guidance, but works every week.</p>
       </div>
       <div className="space-y-3">
         {weeks.map((w) => {

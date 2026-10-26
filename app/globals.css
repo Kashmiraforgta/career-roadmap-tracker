@@ -69,6 +69,29 @@ h1, h2, h3, .font-display {
   border-color: rgba(178, 127, 37, 0.5);
 }
 
+.page-heading-panel {
+  background: linear-gradient(135deg, rgba(10, 16, 112, 0.96), rgba(2, 5, 86, 0.96));
+  border: 1px solid rgba(100, 223, 49, 0.35);
+  border-radius: 1.25rem;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 12px 30px -22px rgba(1, 172, 212, 0.5);
+}
+
+.page-heading-panel h2 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0;
+}
+
+.page-heading-panel p {
+  color: #A9D2E2;
+  margin-top: 0.4rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
 @keyframes pulse-ring {
   0% { box-shadow: 0 0 0 0 rgba(100, 223, 49, 0.4); }
   100% { box-shadow: 0 0 0 12px rgba(100, 223, 49, 0); }

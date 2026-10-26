@@ -80,17 +80,17 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
-      <header className="bg-white/90 backdrop-blur border-b border-line">
+      <header className="bg-[#0A1070] backdrop-blur border-b-[3px] border-[#64DF31]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-2 flex items-center justify-between flex-wrap gap-3">
           <div>
-            <h1 className="text-lg sm:text-xl font-display font-bold text-navy">Career Roadmap Tracker</h1>
-            <p className="text-xs text-inksoft">16-week prep · DA · DS · MLE · AI Eng · Full Stack · Finance</p>
+            <h1 className="text-lg sm:text-xl font-display font-bold text-white">Career Roadmap Tracker</h1>
+            <p className="text-xs text-[#A9D2E2]">16-week prep · DA · DS · MLE · AI Eng · Full Stack · Finance</p>
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
             <span className="text-[11px] text-inksoft font-tabular hidden sm:inline">{SYNC_LABEL[trackerState.syncStatus]}</span>
             <button
               onClick={trackerState.exportData}
-              className="flex items-center gap-1.5 text-xs text-inksoft hover:text-accent border border-line hover:border-accent/50 rounded-lg px-3 py-1.5 transition-colors"
+              className="flex items-center gap-1.5 text-xs text-white/80 hover:text-[#64DF31] border border-white/20 hover:border-[#64DF31]/70 rounded-lg px-3 py-1.5 transition-colors bg-white/5"
             >
               <IconDownload className="w-3.5 h-3.5" />
               Export
@@ -98,7 +98,7 @@ export default function Home() {
             <BackupRestore onImport={trackerState.importData} />
             <button
               onClick={handleReset}
-              className="flex items-center gap-1.5 text-xs text-inksoft hover:text-red-500 border border-line hover:border-red-300 rounded-lg px-3 py-1.5 transition-colors"
+              className="flex items-center gap-1.5 text-xs text-white/80 hover:text-red-300 border border-white/20 hover:border-red-300/70 rounded-lg px-3 py-1.5 transition-colors bg-white/5"
             >
               <IconRefresh className="w-3.5 h-3.5" />
               Reset

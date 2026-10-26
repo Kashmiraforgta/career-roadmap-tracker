@@ -6,9 +6,9 @@ export default function Platforms({ trackerState }) {
 
   return (
     <div className="space-y-4">
-      <div>
-        <h2 className="text-xl font-display font-bold text-navy">Practice Platforms</h2>
-        <p className="text-sm text-inksoft mt-1">LeetCode, GeeksforGeeks, HackerRank, HackerEarth, Codeforces & Kaggle — log your progress and notes for each.</p>
+      <div className="page-heading-panel">
+        <h2 className="font-display">Practice Platforms</h2>
+        <p>LeetCode, GeeksforGeeks, HackerRank, HackerEarth, Codeforces & Kaggle — log your progress and notes for each.</p>
       </div>
       <div className="grid md:grid-cols-2 gap-4">
         {platforms.map((p) => {

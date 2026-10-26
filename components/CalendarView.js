@@ -152,13 +152,13 @@ export default function CalendarView({ trackerState }) {
 
   return (
     <div className="space-y-4">
-      <div className="flex flex-wrap items-center justify-between gap-3">
+      <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-white/10 bg-[#0A1070]/70 p-4 shadow-sm">
         <div>
-          <h2 className="text-xl font-display font-bold text-navy">Calendar &amp; Daily Goals</h2>
-          <p className="text-sm text-inksoft mt-1">Month, week, and day views — schedule events, track streaks, and set goals per day.</p>
+          <h2 className="text-xl font-display font-bold text-white">Calendar &amp; Daily Goals</h2>
+          <p className="text-sm text-[#A9D2E2] mt-1">Month, week, and day views — schedule events, track streaks, and set goals per day.</p>
         </div>
         <div className="flex items-center gap-2 flex-wrap">
-          <label className="text-xs text-inksoft flex items-center gap-1.5 bg-white border border-line rounded-lg px-2 py-1.5">
+          <label className="text-xs text-white/80 flex items-center gap-1.5 bg-white/5 border border-white/15 rounded-lg px-2 py-1.5">
             Started
             <input
               type="date"

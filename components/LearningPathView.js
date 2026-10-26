@@ -55,9 +55,9 @@ function PathCard({ path }) {
 export default function LearningPathView() {
   return (
     <div className="space-y-4">
-      <div>
-        <h2 className="text-xl font-display font-bold text-navy">Learning Path Reference</h2>
-        <p className="text-sm text-inksoft mt-1">
+      <div className="page-heading-panel">
+        <h2 className="font-display">Learning Path Reference</h2>
+        <p>
           The full phase-by-phase source roadmaps in one place. The granular topics from these are already
           folded into your Tech &amp; Finance Track checklists — this view is for context and strategy, not
           day-to-day checkboxes.

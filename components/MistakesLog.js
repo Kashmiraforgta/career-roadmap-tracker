@@ -128,9 +128,9 @@ export default function MistakesLog({ trackerState }) {
 
   return (
     <div className="space-y-4">
-      <div>
-        <h2 className="text-xl font-display font-bold text-navy">Mistakes / Weak-Topics Log</h2>
-        <p className="text-sm text-inksoft mt-1">
+      <div className="page-heading-panel">
+        <h2 className="font-display">Mistakes / Weak-Topics Log</h2>
+        <p>
           One log across every platform, revisited weekly — exactly what the DSA prep section recommends.
           Log the topic and what went wrong right after a problem, then clear the revision list before mocks.
         </p>

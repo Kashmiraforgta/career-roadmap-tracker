@@ -11,9 +11,9 @@ export default function Projects({ trackerState }) {
 
   return (
     <div className="space-y-4">
-      <div>
-        <h2 className="text-xl font-display font-bold text-navy">Portfolio Projects</h2>
-        <p className="text-sm text-inksoft mt-1">One flagship project per track, plus the cross-track stretch capstone and the two finance models.</p>
+      <div className="page-heading-panel">
+        <h2 className="font-display">Portfolio Projects</h2>
+        <p>One flagship project per track, plus the cross-track stretch capstone and the two finance models.</p>
       </div>
       <div className="space-y-3">
         {projects.map((p) => {

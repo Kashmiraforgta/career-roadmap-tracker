@@ -22,7 +22,7 @@ const TABS = [
 
 export default function TabNav({ active, onChange }) {
   return (
-    <div className="sticky top-0 z-20 bg-white/85 backdrop-blur-md border-b border-line shadow-[0_1px_0_rgba(16,26,51,0.03)]">
+    <div className="sticky top-0 z-20 bg-white/95 backdrop-blur-md border-b-[3px] border-[#64DF31] shadow-[0_2px_0_rgba(100,223,49,0.25)]">
       <div className="max-w-6xl mx-auto px-2 sm:px-6">
         <div className="flex gap-1 overflow-x-auto py-2.5 no-scrollbar">
           {TABS.map((tab) => {

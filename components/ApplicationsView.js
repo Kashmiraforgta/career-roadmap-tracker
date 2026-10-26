@@ -69,9 +69,9 @@ export default function ApplicationsView({ trackerState }) {
 
   return (
     <div className="space-y-4">
-      <div>
-        <h2 className="text-xl font-display font-bold text-navy">Applications</h2>
-        <p className="text-sm text-inksoft mt-1">Every application in one place — matches the roadmap's Week 12+ "track every application" guidance.</p>
+      <div className="page-heading-panel">
+        <h2 className="font-display">Applications</h2>
+        <p>Every application in one place — matches the roadmap's Week 12+ "track every application" guidance.</p>
       </div>
 
       <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">

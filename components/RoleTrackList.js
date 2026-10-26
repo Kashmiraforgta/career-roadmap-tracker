@@ -5,9 +5,9 @@ export default function RoleTrackList({ roles, trackerState, title, description 
 
   return (
     <div className="space-y-4">
-      <div>
-        <h2 className="text-xl font-display font-bold text-navy">{title}</h2>
-        <p className="text-sm text-inksoft mt-1">{description}</p>
+      <div className="page-heading-panel">
+        <h2 className="font-display">{title}</h2>
+        <p>{description}</p>
       </div>
       <div className="grid md:grid-cols-2 gap-4">
         {roles.map((role) => {

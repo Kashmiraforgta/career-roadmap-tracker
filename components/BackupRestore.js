@@ -37,7 +37,7 @@ export default function BackupRestore({ onImport }) {
     <div className="relative">
       <button
         onClick={handlePick}
-        className="flex items-center gap-1.5 text-xs text-inksoft hover:text-accent border border-line hover:border-accent/50 rounded-lg px-3 py-1.5 transition-colors"
+        className="flex items-center gap-1.5 text-xs text-white/80 hover:text-[#64DF31] border border-white/20 hover:border-[#64DF31]/70 rounded-lg px-3 py-1.5 transition-colors bg-white/5"
       >
         <IconUpload className="w-3.5 h-3.5" />
         Restore backup
